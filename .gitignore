@@ -1,0 +1,27 @@
+# Dependencies and generated checkouts
+node_modules/
+cobalt-api/
+
+# Local state, downloads, and build output
+.data/
+downloads/
+release/
+.build/
+windows/bin/
+windows/obj/
+launcher/bin/
+launcher/obj/
+.vs/
+
+# Secrets and machine-local environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs and OS clutter
+*.log
+Thumbs.db
+Desktop.ini
+*.user

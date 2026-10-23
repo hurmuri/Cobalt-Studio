@@ -1,0 +1,50 @@
+name: Bug report
+description: A defect in Cobalt Studio on Windows
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        中文或 English are both fine. Do not paste private videos, cookies, tokens, or your public IP.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The version shown by the running app, for example 1.0.19.
+      placeholder: "1.0.19"
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where it happens
+      options:
+        - Desktop window
+        - Phone page
+        - Download or processing
+        - Packaging or startup
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Start Cobalt Studio 1.0.19
+        2. Paste a public URL
+        3. See the error
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error text
+      description: Remove addresses, names, and cookies before pasting.
+      render: text

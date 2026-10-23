@@ -1,0 +1,33 @@
+@font-face { font-family: 'Cabinet Grotesk'; src: url('/fonts/cabinet-400.woff2') format('woff2'); font-style: normal; font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Cabinet Grotesk'; src: url('/fonts/cabinet-500.woff2') format('woff2'); font-style: normal; font-weight: 500 600; font-display: swap; }
+@font-face { font-family: 'Cabinet Grotesk'; src: url('/fonts/cabinet-700.woff2') format('woff2'); font-style: normal; font-weight: 650 900; font-display: swap; }
+
+:root {
+  color-scheme: light;
+  --bg: #f5f7fa;
+  --sidebar: #f6f8fb;
+  --panel: #ffffff;
+  --text: #202c3e;
+  --muted: #68778d;
+  --line: #e5eaf1;
+  --soft: #f1f4f8;
+  --selected: #eaf0ff;
+  --accent: #3565df;
+  --accent-hover: #2753c2;
+  --danger: #bc3f46;
+  --success: #237655;
+  --shadow: 0 24px 80px #263b5726, 0 4px 16px #263b5710;
+  --sans: 'Cabinet Grotesk', 'Microsoft YaHei UI', 'PingFang SC', 'Noto Sans SC', sans-serif;
+  --mono: 'Cascadia Mono', 'Consolas', monospace;
+  --radius-sm: 6px;
+  --radius: 9px;
+  --radius-lg: 16px;
+  --control-height: 40px;
+  --focus: 0 0 0 3px #3565df24;
+}
+
+* { scrollbar-width: thin; scrollbar-color: #bec9d8 transparent; }
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { border: 2px solid transparent; border-radius: 8px; background: #bec9d8; background-clip: padding-box; }
+*::-webkit-scrollbar-thumb:hover { background-color: #93a2b8; }
+*::-webkit-scrollbar-track { background: transparent; }

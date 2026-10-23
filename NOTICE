@@ -1,0 +1,30 @@
+Cobalt Studio
+Copyright (C) 2026 hurmuri
+
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or (at your
+option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License
+for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+Cobalt Studio is an independent Windows application. It is not affiliated
+with, endorsed by, or maintained by imputnet. "cobalt" is the name of the
+upstream project at https://github.com/imputnet/cobalt.
+
+The corresponding source for this program is:
+https://github.com/hurmuri/Cobalt-Studio
+
+The cobalt revision distributed with a release is pinned in UPSTREAM.json.
+Release 1.0.19 uses cobalt 11.7.1 at
+a636575b09de1fc55d9b8cd98cac88f5f2f16b42, plus the compatibility patch in
+scripts/patch-cobalt.mjs. That patch is part of this AGPL-3.0-only program.
+It does not add a login, paywall, or DRM bypass.
+
+Third-party components keep their own licenses. See THIRD-PARTY-NOTICES.md.

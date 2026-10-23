@@ -1,0 +1,8 @@
+{
+  "name": "cobalt",
+  "version": "11.7.1",
+  "repository": "https://github.com/imputnet/cobalt.git",
+  "commit": "a636575b09de1fc55d9b8cd98cac88f5f2f16b42",
+  "license": "AGPL-3.0-only",
+  "patch": "scripts/patch-cobalt.mjs"
+}

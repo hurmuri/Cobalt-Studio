@@ -1,0 +1,37 @@
+{
+  "name": "cobalt-studio",
+  "version": "1.0.19",
+  "private": true,
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "description": "Self-hosted Windows download studio for public media, powered by cobalt.",
+  "author": "hurmuri",
+  "homepage": "https://github.com/hurmuri/Cobalt-Studio",
+  "bugs": {
+    "url": "https://github.com/hurmuri/Cobalt-Studio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hurmuri/Cobalt-Studio.git"
+  },
+  "keywords": [
+    "cobalt",
+    "downloader",
+    "windows",
+    "self-hosted",
+    "webview2"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs",
+    "test": "node test/config.test.mjs && node test/network.test.mjs && node test/instagram.test.mjs && node test/run.mjs && node test/web.test.mjs && node test/desktop.test.mjs && node test/release.test.mjs && node test/ui-smoke.mjs",
+    "release": "pwsh -NoProfile -File scripts/release.ps1 -Bump patch"
+  },
+  "dependencies": {
+    "gsap": "^3.14.2",
+    "qrcode": "^1.5.4"
+  }
+}

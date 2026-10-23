@@ -1,0 +1,11 @@
+{
+  "profile": "product-admin",
+  "sourceRoots": ["public"],
+  "locale": "zh-CN",
+  "canonicalMap": "UX-CONTRACT.md",
+  "requiredCapabilities": ["Select/Listbox", "Form", "Scrollbar", "Toast", "CRUD"],
+  "ownership": { "Select/Listbox": "native" },
+  "requiredCommands": ["unit", "e2e"],
+  "commands": { "unit": "node test/web.test.mjs", "e2e": "node test/ui-smoke.mjs" },
+  "evidence": { "crudFullFlow": "test/web.test.mjs", "failurePaths": "test/ui-smoke.mjs" }
+}

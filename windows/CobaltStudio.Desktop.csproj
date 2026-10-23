@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AssemblyName>Cobalt Studio</AssemblyName>
+    <RootNamespace>CobaltStudio</RootNamespace>
+    <InformationalVersion>1.0.19</InformationalVersion>
+    <FileVersion>1.0.19.0</FileVersion>
+    <AssemblyVersion>1.0.19.0</AssemblyVersion>
+    <Version>1.0.19</Version>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <PublishReadyToRun>true</PublishReadyToRun>
+    <PublishTrimmed>false</PublishTrimmed>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <SelfContained>true</SelfContained>
+    <DebugType>embedded</DebugType>
+    <SatelliteResourceLanguages>zh-Hans</SatelliteResourceLanguages>
+    <InvariantGlobalization>false</InvariantGlobalization>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <PublishSingleFile>true</PublishSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3179.45" />
+  </ItemGroup>
+  <Target Name="RemoveUnusedWebView2WpfReference" BeforeTargets="ResolveAssemblyReferences">
+    <ItemGroup>
+      <_WebView2WpfReference Include="@(Reference)" Condition="$([System.String]::Copy('%(Identity)').EndsWith('Microsoft.Web.WebView2.Wpf.dll'))" />
+      <Reference Remove="@(_WebView2WpfReference)" />
+    </ItemGroup>
+  </Target>
+  <ItemGroup>
+    <Content Update="Microsoft.Web.WebView2.Core.xml;
+                    Microsoft.Web.WebView2.Wpf.xml;
+                    Microsoft.Web.WebView2.WinForms.xml"
+             CopyToPublishDirectory="Never" />
+    <None Update="Microsoft.Web.WebView2.Core.xml;
+                   Microsoft.Web.WebView2.Wpf.xml;
+                   Microsoft.Web.WebView2.WinForms.xml"
+          CopyToPublishDirectory="Never" />
+  </ItemGroup>
+</Project>

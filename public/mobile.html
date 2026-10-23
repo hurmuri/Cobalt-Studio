@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f6f7f8" />
+    <title>下载器</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/mobile.css" />
+  </head>
+  <body>
+    <header class="mobile-toolbar">
+      <span>下载器</span>
+      <span class="connection" id="connection"><i></i><span>连接中</span></span>
+    </header>
+
+    <main class="mobile-shell">
+      <p id="mobileBootStatus" class="connection-help" role="status">正在连接电脑… 若长时间无响应，请使用手机系统浏览器打开当前 http 地址。 <a href="/mobile?reload=1">重新加载</a></p>
+      <noscript>请在手机系统浏览器中开启 JavaScript 后重试。</noscript>
+      <form class="mobile-form" id="mobileForm" novalidate>
+        <div class="url-box">
+            <textarea id="mobileUrl" class="resize-none" rows="3" inputmode="url" autocomplete="off" spellcheck="false" aria-label="下载链接，每行一个" placeholder="粘贴链接，可一次输入多个，每行一个" required></textarea>
+          <button type="button" id="pasteButton">粘贴</button>
+        </div>
+        <div class="mobile-options">
+          <label>类型
+            <select id="mobileMode">
+              <option value="auto">视频 + 音频</option>
+              <option value="audio">仅音频</option>
+              <option value="mute">无声视频</option>
+            </select>
+          </label>
+          <label>画质
+            <select id="mobileQuality">
+              <option value="max">最高</option>
+              <option value="1080">1080p</option>
+              <option value="720">720p</option>
+            </select>
+          </label>
+          <button class="send-button" id="sendButton" type="submit">下载</button>
+        </div>
+        <p class="form-message" id="mobileMessage" role="status"></p>
+      </form>
+
+      <section class="tasks">
+        <div class="tasks-head">
+          <span>下载</span>
+          <span id="liveLabel">连接中</span>
+        </div>
+        <div id="mobileTaskList" class="mobile-task-list">
+          <div class="mobile-empty">暂无任务</div>
+        </div>
+      </section>
+    </main>
+    <footer class="mobile-source"><a href="https://github.com/hurmuri/Cobalt-Studio" target="_blank" rel="noreferrer">源代码 · AGPL-3.0</a></footer>
+    <script src="/mobile-status.js"></script>
+    <script src="/mobile.js" type="module"></script>
+  </body>
+</html>
